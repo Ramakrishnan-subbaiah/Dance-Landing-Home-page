@@ -1,32 +1,68 @@
-/*      
-    font-family: 'Merriweather', serif;
-    font-family: 'Montserrat', sans-serif;
-        
-*/
 body{
     background-color:lightgrey;
+    font-family: 'Montserrat', sans-serif;
 }
-.title-img{
-    width: 35%;
-    position:fixed;
-    left:1%;
-    z-index: -1;
+.grid{
+    display: grid;
+    gap: 8px;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 35% 60% 5%;
 }
-/*-------------NAVBAR------------------------*/
-nav{
+.img-left{
+    grid-row: 1 / span 2 ;
+    grid-column: 1;
+}
+.navbar-top{
+    grid-row: 1;
+    grid-column:  2 / span 3;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
 }
+.titlebar-left{
+    grid-row: 2;
+    grid-column: 2;
+}
+.blog-right{
+    grid-row: 2;
+    grid-column: 3;
+}
+.grid-btm{
+    display: grid;
+    gap: 8px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 40% 40% 20%;
+}
+.btn-btm{
+    grid-row: 1;
+    grid-column: 1 / span 3;
+}
+.work{
+    grid-row: 2;
+    grid-column: 1;
+    padding-top:  16px; 
+}
+.quotes{
+    grid-row: 2;
+    grid-column:2;
+    font-size: 1.3rem;
+}
+.dwn-arw{
+    grid-row: 2;
+    grid-column: 3;
+}
+/*-------------NAVBAR------------------------*/
+
 .logo-name{
     font-size: 2rem;
+    padding-left: 10px;
+    
 }
 .navbar-menu{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 .nav{
     float: left;   
@@ -35,30 +71,86 @@ nav{
     text-decoration: none;
     display: block;
     text-align: center;
-    padding: 16px;
+    padding: 20px;
     color: grey;
+    font-size: 1.3rem;
 }
 .nav a:hover{
     color: black;
 }
 /*--------------------TITLE--------------------*/
-.title{
-    position: absolute;
-    left: 38%;
-    
+.title-img{
+    width: 100%;
 }
 .crea{
     color: white;
-    -webkit-text-stroke: 1px black;
-    font-size: 6rem;
+    -webkit-text-stroke: 1px #3a3535;
+    font-size: 5rem;
     font-family: 'Merriweather', serif;
+    letter-spacing: 2px;
     padding: 0;
     margin: 0;   
 }
+.flex-heading{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.heading{
+    font-size: 1.8rem;
+    color: grey;
+}
 .tivity{
-    font-size: 6rem;
+    font-size: 5rem;
+    color: #3a3535;
     font-family: 'Merriweather', serif;
+    letter-spacing: 3px;
     padding: 0;
+    margin: 0;   
+}
+
+/*------------------BLOG--------------*/
+
+.blog{
+    list-style-type: none;
     margin: 0;
-    text-indent: 50%;    
+    padding: 0;
+}
+
+.blog-items{
+    color: #3a3535;    
+    display: block;
+    text-align: center;
+    padding: 15px;
+}
+.blog-items:hover{
+    color:black;
+    cursor: pointer;
+}
+.btn{
+    background-color: #3a3535;
+    border: #3a3535;
+    color: white;
+    font-size: 1.5rem;
+    padding: 16px;
+    float: right;
+}
+.btn:hover{
+    background-color: grey;
+    color:white;
+    cursor:pointer;
+}
+/*------------WORKS------------------*/
+.work-name{
+    color: grey;
+    font-size: 1.1rem;
+    padding: 8px;
+}
+.btm-img{
+    width:100%;
+}
+.arrow{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
 }
